@@ -1,0 +1,52 @@
+electricity_units = [
+    [50, 120, 180, 250],  # Slab 1 data
+    [130, 220, 300, 400],  # Slab 2 data
+    [210, 280, 350, 420]   # Slab 3 data
+]
+
+def costSlab1():
+    unit_cost = 10
+    units_consumed = sum(electricity_units[0])
+    total_cost = unit_cost * units_consumed
+    print(f"Total cost for Slab 1: Rs. {total_cost}")
+
+def costSlab2():
+    unit_cost = 15
+    units_consumed = sum(electricity_units[1])
+    total_cost = unit_cost * units_consumed
+    print(f"Total cost for Slab 2: Rs. {total_cost}")
+
+def costSlab3():
+    unit_cost = 20
+    units_consumed = sum(electricity_units[2])
+    total_cost = unit_cost * units_consumed
+    print(f"Total cost for Slab 3: Rs. {total_cost}")
+
+while True:
+    print("-----------------------")
+    print("      ELECTRICITY BILL CALCULATOR")
+    print("-----------------------")
+    print("1. Display the bill of Slab 1 and Slab 2")
+    print("2. Display the bill of Slab 3")
+    print("Press any other key to exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == '1':
+        print("-----------------------")
+        print("Slab 1")
+        print("-----------------------")
+        costSlab1()
+        
+        print("-----------------------")
+        print("Slab 2")
+        print("-----------------------")
+        costSlab2()
+    elif choice == '2':
+        print("-----------------------")
+        print("Slab 3")
+        print("-----------------------")
+        costSlab3()
+    else:
+        print("Program terminated.")
+        break
